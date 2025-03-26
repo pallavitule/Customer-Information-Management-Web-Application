@@ -1,0 +1,40 @@
+﻿@* @{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+ *@
+
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<div class="container mt-5">
+    <div class="text-center">
+        <h1 class="display-4 text-white p-3 rounded shadow-lg" style="background-color: #002855;">
+            Privacy Policy
+        </h1>
+    </div>
+
+    <div class="card mx-auto shadow-lg p-4 mt-4" style="max-width: 800px; background-color: #f8f9fa; border-radius: 10px;">
+        <p class="lead text-center">Your privacy is important to us. This page outlines how we collect, use, and protect your data.</p>
+        <hr />
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>Data Collection:</strong> We collect necessary information to provide better services.</li>
+            <li class="list-group-item"><strong>Usage:</strong> Your data is used solely for improving your experience.</li>
+            <li class="list-group-item"><strong>Security:</strong> We implement strong measures to protect your data.</li>
+            <li class="list-group-item"><strong>Third Parties:</strong> We do not share your personal information without consent.</li>
+            <li class="list-group-item"><strong>Updates:</strong> Our privacy policy may change over time, so check back regularly.</li>
+        </ul>
+    </div>
+
+    <div class="text-center mt-4">
+        <a asp-controller="Home" asp-action="Index" class="btn btn-primary rounded-pill">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+    </div>
+</div>
+
+<!-- Include FontAwesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">

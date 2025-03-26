@@ -1,0 +1,41 @@
+﻿@model Customer
+
+<div class="container mt-4">
+    <h2 class="text-center text-white p-3 rounded shadow-lg" style="background-color: #002855;">
+        Customer Details
+    </h2>
+
+    <div class="card mx-auto shadow-lg p-4" style="max-width: 500px; background-color: #f8f9fa; border-radius: 10px;">
+        <table class="table table-bordered">
+            <tr>
+                <td><strong>Cust ID:</strong></td>
+                <td>@Model.Custid</td>
+            </tr>
+            <tr>
+                <td><strong>Name:</strong></td>
+                <td>@Model.Name</td>
+            </tr>
+            <tr>
+                <td><strong>Balance:</strong></td>
+                <td>@Model.Balance</td>
+            </tr>
+            <tr>
+                <td><strong>City:</strong></td>
+                <td>@Model.City</td>
+            </tr>
+            <tr>
+                <td><strong>Status:</strong></td>
+                <td>@Model.Status</td>
+            </tr>
+        </table>
+
+        <div class="text-center mt-3">
+            <a asp-action="DisplayCustomers" class="btn btn-primary">
+                <i class="fas fa-arrow-left"></i> Back to Customer Details
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Include FontAwesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">

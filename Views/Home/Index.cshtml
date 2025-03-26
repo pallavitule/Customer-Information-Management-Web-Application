@@ -1,0 +1,38 @@
+﻿
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container mt-5">
+    <div class="text-center">
+        <h1 class="display-4 text-white p-3 rounded shadow-lg" style="background-color: #002855;">
+            Welcome to Customer Information Management
+        </h1>
+        <p class="lead mt-3">Manage student records efficiently with our intuitive platform.</p>
+
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-6">
+                <div class="card shadow-lg p-4" style="background-color: #f8f9fa; border-radius: 10px;">
+                    <h3 class="text-center text-primary">Explore Features</h3>
+                    <hr />
+
+                    <div class="d-grid gap-3">
+                        <a asp-controller="Account" asp-action="Login" asp-route-returnUrl="/Customer/DisplayCustomers" class="btn btn-primary rounded-pill">
+                            <i class="fas fa-users"></i> View Customers
+                        </a>
+                        <a asp-controller="Account" asp-action="Login" asp-route-returnUrl="/Customer/AddCustomer" class="btn btn-success rounded-pill">
+                            <i class="fas fa-user-plus"></i> Add Customer
+                        </a>
+                        <a href="https://learn.microsoft.com/aspnet/core" class="btn btn-info rounded-pill" target="_blank">
+                            <i class="fas fa-book"></i> Learn ASP.NET Core
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Include FontAwesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">

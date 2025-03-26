@@ -1,0 +1,46 @@
+﻿ @model Customer
+
+<div class="container mt-4">
+    <h2 class="text-center text-white p-3 rounded shadow-lg" style="background-color: #002855;">
+        Add New Customer
+    </h2>
+
+    <div class="card mx-auto shadow-lg p-4" style="max-width: 500px; background-color: #f8f9fa; border-radius: 10px;">
+        <form asp-action="AddCustomer">
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label fw-bold">Name</label>
+                <input asp-for="Name" class="form-control rounded-pill" placeholder="Enter name" required />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Balance" class="form-label fw-bold">Balance</label>
+                <input asp-for="Balance" class="form-control rounded-pill" placeholder="Enter balance" required />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="City" class="form-label fw-bold">City</label>
+                <input asp-for="City" class="form-control rounded-pill" placeholder="Enter city" required />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Status" class="form-label fw-bold">Status</label>
+                <select asp-for="Status" class="form-select rounded-pill">
+                    <option value="true">Active</option>
+                    <option value="false">Inactive</option>
+                </select>
+            </div>
+
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-success rounded-pill fw-bold">
+                    <i class="fas fa-user-plus"></i> Add Customer
+                </button>
+                <a asp-action="DisplayCustomers" class="btn btn-outline-secondary rounded-pill">
+                    <i class="fas fa-arrow-left"></i> Back
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Include FontAwesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">

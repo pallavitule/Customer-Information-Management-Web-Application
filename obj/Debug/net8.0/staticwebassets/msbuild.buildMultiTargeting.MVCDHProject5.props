@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MVCDHProject5.props" />
+</Project>

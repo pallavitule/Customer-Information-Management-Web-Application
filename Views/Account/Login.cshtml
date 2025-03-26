@@ -1,0 +1,64 @@
+﻿@model MVCDHProject5.Models.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+    var returnUrl = Context.Request.Query["ReturnUrl"];
+}
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg p-4" style="max-width: 450px; width: 100%;">
+        <div class="card-body">
+            <h2 class="text-center text-primary mb-4"><i class="fas fa-user-lock"></i> Login</h2>
+            <hr />
+
+            <form asp-action="Login" asp-route-ReturnUrl="@returnUrl">
+                <div asp-validation-summary="ModelOnly" class="text-danger text-center"></div>
+
+                <div class="mb-3">
+                    <label asp-for="Name" class="form-label fw-bold"></label>
+                    <input asp-for="Name" class="form-control rounded-pill" placeholder="Enter your name" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label fw-bold"></label>
+                    <input asp-for="Password" type="password" class="form-control rounded-pill" placeholder="Enter your password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input class="form-check-input" asp-for="RememberMe" />
+                    <label class="form-check-label fw-bold">
+                        @Html.DisplayNameFor(model => model.RememberMe)
+                    </label>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary rounded-pill fw-bold">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </button>
+                    <button type="reset" class="btn btn-outline-secondary rounded-pill">
+                        <i class="fas fa-sync"></i> Reset
+                    </button>
+                </div>
+
+                <div class="text-center mt-3">
+                    <p class="small">
+                        New user? <a asp-action="Register" class="text-decoration-none fw-bold text-primary">Click here</a> to register.
+                    </p>
+                    @* <p class="small">
+                        Forgot password? - <a asp-action="ForgotPassword" class="text-decoration-none fw-bold text-danger">Click here</a> to reset.
+                    </p> *@
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<!-- Include FontAwesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
